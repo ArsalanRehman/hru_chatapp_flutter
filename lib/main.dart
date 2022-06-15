@@ -1,75 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:hru_chatapp_flutter/services/navigation_service.dart';
+import 'package:provider/provider.dart';
+import '../pages/splash_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    SplashPage(key: UniqueKey(), onInitializationComplete:  (){},)
+  );
 }
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-
+class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      appBar: AppBar(
-
-        title: Text(widget.title),
-      ),
-      body: Center(
-
-        child: Column(
-         
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+        title: 'Harran Chat',
+        theme: ThemeData(
+          backgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
+          scaffoldBackgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+            backgroundColor: Color.fromRGBO(30, 29, 37, 1.0),
+          ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        // navigatorKey: NavigationService.navigatorKey,
+        // initialRoute: '/login',
+        // routes: {
+        //   '/login': (BuildContext _context) => LoginPage(),
+        //   '/register': (BuildContext _context) => RegisterPage(),
+        //   '/home': (BuildContext _context) => HomePage(),
+        // },
+      );
+
   }
 }
