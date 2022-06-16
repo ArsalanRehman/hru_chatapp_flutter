@@ -29,9 +29,9 @@ class DatabaseService {
 //     }
 //   }
 //
-//   Future<DocumentSnapshot> getUser(String _uid) {
-//     return _db.collection(USER_COLLECTION).doc(_uid).get();
-//   }
+  Future<DocumentSnapshot> getUser(String _uid) {
+    return _db.collection(USER_COLLECTION).doc(_uid).get();
+  }
 //
 //   Future<QuerySnapshot> getUsers({String? name}) {
 //     Query _query = _db.collection(USER_COLLECTION);
@@ -92,17 +92,17 @@ class DatabaseService {
 //     }
 //   }
 //
-//   Future<void> updateUserLastSeenTime(String _uid) async {
-//     try {
-//       await _db.collection(USER_COLLECTION).doc(_uid).update(
-//         {
-//           "last_active": DateTime.now().toUtc(),
-//         },
-//       );
-//     } catch (e) {
-//       print(e);
-//     }
-//   }
+  Future<void> updateUserLastSeenTime(String _uid) async {
+    try {
+      await _db.collection(USER_COLLECTION).doc(_uid).update(
+        {
+          "last_active": DateTime.now().toUtc(),
+        },
+      );
+    } catch (e) {
+      print(e);
+    }
+  }
 //
 //   Future<void> deleteChat(String _chatID) async {
 //     try {

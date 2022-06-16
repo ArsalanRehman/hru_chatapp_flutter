@@ -8,7 +8,7 @@ import '../widgets/custom_input_fields.dart';
 import '../widgets/rounded_button.dart';
 
 //Providers
-// import '../providers/authentication_provider.dart';
+import '../provider/authentication_provider.dart';
 
 //Services
 import '../services/navigation_service.dart';
@@ -24,8 +24,7 @@ class _LoginPageState extends State<LoginPage> {
   late double _deviceHeight;
   late double _deviceWidth;
 
-  //TODO: Fix it
-  // late AuthenticationProvider _auth;
+  late AuthenticationProvider _auth;
   late NavigationService _navigation;
 
   final _loginFormKey = GlobalKey<FormState>();
@@ -37,8 +36,8 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     _deviceHeight = MediaQuery.of(context).size.height;
     _deviceWidth = MediaQuery.of(context).size.width;
-    //TODO: Fix it
-    // _auth = Provider.of<AuthenticationProvider>(context);
+
+    _auth = Provider.of<AuthenticationProvider>(context);
     _navigation = GetIt.instance.get<NavigationService>();
     return _buildUI();
   }
@@ -117,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                   });
                 },
                 regEx: r".{8,}",
-                hintText: "Password",
+                hintText: "Şifre",
                 obscureText: true),
           ],
         ),
@@ -127,14 +126,14 @@ class _LoginPageState extends State<LoginPage> {
   //
   Widget _loginButton() {
     return RoundedButton(
-      name: "Login",
+      name: "Giris Yap",
       height: _deviceHeight * 0.065,
       width: _deviceWidth * 0.65,
       onPressed: () {
         if (_loginFormKey.currentState!.validate()) {
           _loginFormKey.currentState!.save();
-          //TODO: Fix it
-          // _auth.loginUsingEmailAndPassword(_email!, _password!);
+
+          _auth.loginUsingEmailAndPassword(_email!, _password!);
         }
       },
     );
