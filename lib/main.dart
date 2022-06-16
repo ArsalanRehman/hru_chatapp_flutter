@@ -39,7 +39,7 @@ class MainApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (BuildContext _context) => LoginPage(),
-        // '/register': (BuildContext _context) => RegisterPage(),
+         '/register': (BuildContext _context) => RegisterPage(),
         '/home': (BuildContext _context) => HomePage(),
       },
     ),
