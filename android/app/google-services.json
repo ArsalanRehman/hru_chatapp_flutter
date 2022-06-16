@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "11414360351",
+    "project_id": "hru-chat-31246",
+    "storage_bucket": "hru-chat-31246.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11414360351:android:acde68fd61671d651e202a",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11414360351-clhb9op351pk3ub0nn884cul9ublk28t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG8BuVQpeihjDx7xlavQ-MCK9TKST3KTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11414360351-clhb9op351pk3ub0nn884cul9ublk28t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11414360351:android:862e8519b3e406081e202a",
+        "android_client_info": {
+          "package_name": "com.example.hru_chatapp_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11414360351-clhb9op351pk3ub0nn884cul9ublk28t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG8BuVQpeihjDx7xlavQ-MCK9TKST3KTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11414360351-clhb9op351pk3ub0nn884cul9ublk28t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

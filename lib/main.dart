@@ -5,6 +5,7 @@ import 'package:hru_chatapp_flutter/provider/authentication_provider.dart';
 import 'package:hru_chatapp_flutter/services/navigation_service.dart';
 import 'package:provider/provider.dart';
 import '../pages/splash_page.dart';
+import '../pages/register_page.dart';
 
 void main() {
   runApp(
