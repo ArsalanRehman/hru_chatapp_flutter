@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:get_it/get_it.dart';
+import 'package:hru_chatapp_flutter/widgets/rounded_image.dart';
 import 'package:provider/provider.dart';
 
 import '../services/media_service.dart';
@@ -22,6 +23,8 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage>{
   late double _deviceHeight;
   late double _deviceWidth;
+
+  PlatformFile? _profileImage;
   @override
   Widget build(BuildContext context) {
 
@@ -54,6 +57,8 @@ class _RegisterPageState extends State<RegisterPage>{
     );
   }
   Widget _profileImageField(){
-    return
+    return RoundedImageNetwork(key: UniqueKey(),
+      imagePath: "https://i.pravatar.cc/150?img=65",
+      size: _deviceHeight * 0.15,);
   }
 }
